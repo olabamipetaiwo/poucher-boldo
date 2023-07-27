@@ -3,7 +3,7 @@ import Mark from "assets/svgs/mark.svg";
 import Eye from "assets/svgs/eye.svg";
 import Light from "assets/svgs/light.svg";
 import Feather from "assets/svgs/feather.svg";
-import Pie from "assets/svgs/pie.svg";
+import Pie from "assets/svgs/Pie.svg";
 
 const Features = () => {
   const _features = [
