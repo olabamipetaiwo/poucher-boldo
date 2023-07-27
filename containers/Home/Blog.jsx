@@ -30,10 +30,10 @@ const Blog = () => {
       <h2 className="text-center title-text font-sans mb-4 text-gray">
         Our Blog
       </h2>
-      <p className="text-center w-3/4 header-text font-body mb-16 text-black ">
+      <p className="text-center lg:w-3/4 header-text font-body mb-16 text-black ">
         Value proposition accelerator product management venture
       </p>
-      <section className="grid grid-cols-3 gap-16 mb-20">
+      <section className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-20">
         {_services.map((_item) => {
           return (
             <div

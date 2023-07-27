@@ -37,7 +37,7 @@
   }
 
   .header-text {
-    @apply font-body font-normal text-5xl;
+    @apply font-body font-normal text-3xl lg:text-5xl;
     line-height: 72px;
   }
 
@@ -137,8 +137,8 @@
     }
   }
 
-  .button {
-    @apply text-dark-blue text-left flex flex-wrap justify-between items-center w-full text-xl font-sans px-4 py-4;
+  .accordion-btn {
+    @apply text-dark-blue text-left flex flex-wrap justify-between items-center w-full text-base tab:text-xl font-sans px-4 py-4;
   }
 
   .answer {

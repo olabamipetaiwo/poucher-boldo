@@ -7,7 +7,7 @@ const Newsletter = () => {
         An enterprise template to ramp up your company website
       </p>
 
-      <section className="form w-1/2">
+      <section className="form w-[80%] lg:w-1/2 mx-auto">
         <div className="form-group basis-[60%]">
           <input name="email" type="email" placeholder="Your email address" />
         </div>

@@ -1,9 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import Mark from "assets/svgs/mark.svg";
-import Eye from "assets/svgs/eye.svg";
-import Light from "assets/svgs/light.svg";
-import Feather from "assets/svgs/feather.svg";
-
 import RightArrow from "assets/svgs/right-arrow.svg";
 import LeftArrow from "assets/svgs/left-arrow.svg";
 
@@ -34,11 +29,11 @@ const Testimonials = () => {
 
   return (
     <section className="fit-x-bleed flex flex-col py-32 bg-dark-blue">
-      <div className="flex justify-between items-end">
+      <div className="flex flex-col lg:flex-row justify-between items-end ">
         <h3 className="header-text text-white mr-4">
           An enterprise template to ramp up your company website
         </h3>
-        <div className="flex items-center">
+        <div className="flex items-center mt-6">
           <button className="testimonial__btn mr-7">
             <LeftArrow />
           </button>
@@ -47,7 +42,7 @@ const Testimonials = () => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-12 mt-[72px]">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-[72px]">
         {_testimonials.map((_testimonial) => {
           return (
             <div key={_testimonial.name}>

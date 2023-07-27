@@ -33,9 +33,12 @@ const Features = () => {
   return (
     <section className="fit-x-bleed flex flex-col py-32 bg-gray bg-opacity-10">
       <section className="grid grid-cols-1 lg:grid-cols-2  gap-x-36 mb-16 lg:mb-32">
-        <figure>
-          <img className="object-fill " src="/images/man.png" alt="man" />
-        </figure>
+        <div className="flex items-center justify-center relative">
+          <figure className="w-full">
+            <img className="img-fill" src="/images/man.png" alt="man" />
+          </figure>
+        </div>
+
         <div className="flex flex-col pt-16">
           <p className="font-body text-4xl leading-[56px] text-black mb-10">
             We connect our customers with the best, and help them keep up-and
@@ -54,7 +57,7 @@ const Features = () => {
           <button className="btn btn-primary mt-12">Start now</button>
         </div>
       </section>
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-36 mb-40">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-36 mb-16 lg:mb-40">
         <div className="flex flex-col pt-16">
           <p className="font-body text-4xl leading-[56px] text-black mb-10">
             We connect our customers with the best, and help them keep up-and

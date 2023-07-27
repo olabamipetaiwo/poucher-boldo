@@ -16,7 +16,7 @@ const AccordionItem = ({ faq }) => {
 
   return (
     <li className={`accordion_item ${clicked ? "active" : ""}`}>
-      <button className="button" onClick={handleToggle}>
+      <button className="accordion-btn" onClick={handleToggle}>
         {question}
         <Mark />
       </button>
@@ -60,7 +60,7 @@ const FAQs = () => {
       <figure className="w-full rounded-3xl overflow-hidden mb-14">
         <img className=" object-fill " src="/images/office.png" alt="office" />
       </figure>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 tab:grid-cols-2 gap-10">
         <p className="font-body text-4xl leading-[56px] text-black;">
           We connect our customers with the best, and help them keep up-and stay
           open.
