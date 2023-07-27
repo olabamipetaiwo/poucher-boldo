@@ -32,7 +32,7 @@ const Features = () => {
 
   return (
     <section className="fit-x-bleed flex flex-col py-32 bg-gray bg-opacity-10">
-      <section className="grid grid-cols-2  gap-x-36 mb-32">
+      <section className="grid grid-cols-1 lg:grid-cols-2  gap-x-36 mb-16 lg:mb-32">
         <figure>
           <img className="object-fill " src="/images/man.png" alt="man" />
         </figure>
@@ -45,8 +45,8 @@ const Features = () => {
           {_features.map((_feature) => {
             return (
               <div key={_feature} className="flex items-center mb-6 text-black">
-                <Mark />
-                <p className="ml-7 title-text ">{_feature}</p>
+                <Mark className="mr-4" />
+                <p className="title-text ">{_feature}</p>
               </div>
             );
           })}
@@ -54,7 +54,7 @@ const Features = () => {
           <button className="btn btn-primary mt-12">Start now</button>
         </div>
       </section>
-      <section className="grid grid-cols-2 gap-x-36 mb-40">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-36 mb-40">
         <div className="flex flex-col pt-16">
           <p className="font-body text-4xl leading-[56px] text-black mb-10">
             We connect our customers with the best, and help them keep up-and
@@ -79,11 +79,11 @@ const Features = () => {
             );
           })}
         </div>
-        <div className="flex items-center justify-center relative ">
+        <div className="flex items-center justify-center relative  flex-col">
           <figure className="w-full">
             <img className="img-fill " src="/images/woman.png" alt="woman" />
           </figure>
-          <div className="absolute z-10 -bottom-40 bo  left-20 bg-white py-16 px-10 rounded-xl">
+          <div className="md:absolute z-10 -bottom-40  left-20 bg-white py-16 px-10 rounded-xl mt-10 md:mt-0">
             <figure className="flex items-center justify-center mb-6">
               <Pie />
             </figure>
