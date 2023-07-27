@@ -114,6 +114,17 @@
     }
   }
 
+  .companies {
+    @apply flex flex-wrap lg:flex-nowrap items-center justify-between py-20;
+
+    figure {
+      @media (max-width: 1024px) {
+        flex-basis: 100%;
+        @apply w-full flex items-center justify-center mb-10;
+      }
+    }
+  }
+
   .img-fill {
     @apply object-cover w-full h-full;
   }

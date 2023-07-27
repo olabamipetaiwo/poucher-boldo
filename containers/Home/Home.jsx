@@ -6,8 +6,8 @@ import Presto from "assets/svgs/presto.svg";
 
 const Hero = () => {
   return (
-    <header className="fit-x-bleed flex flex-col pt-40 bg-gray bg-opacity-10">
-      <section className="grid grid-cols-2">
+    <header className="fit-x-bleed flex flex-col pt-20 lg:pt-40 bg-gray bg-opacity-10">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div className="flex flex-col">
           <h3 className="header-text text-dark-blue mt-16 mb-4">
             Save time by building fast with Boldo Template{" "}
@@ -17,18 +17,22 @@ const Hero = () => {
             partnership. First mover advantage innovator success deployment
             non-disclosure.
           </p>
-          <div className="flex items-center mt-12 mb-6">
-            <button className="btn btn-primary mr-6">Buy template</button>
-            <button className="btn btn-outline">Explore</button>
+          <div className="flex items-center mt-12 mb-6 flex-col sm:flex-row">
+            <button className="btn btn-primary sm:mr-6 mb-4 sm:mb-0 w-full lg:w-[210px]">
+              Buy template
+            </button>
+            <button className="btn btn-outline w-full lg:w-[210px]">
+              Explore
+            </button>
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <figure>
-            <HeroIllustration />
+          <figure className="overflow-hidden">
+            <HeroIllustration className="img-fill" />
           </figure>
         </div>
       </section>
-      <section className="flex items-center justify-between py-20">
+      <section className="companies">
         <figure>
           <Boldo />
         </figure>

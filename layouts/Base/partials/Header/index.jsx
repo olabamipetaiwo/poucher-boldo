@@ -53,7 +53,7 @@ const Navbar = () => {
         </ul>
       </nav>
 
-      <nav className="flex md:hidden bg-white fit-x-bleed py-4">
+      <nav className="flex md:hidden bg-transparent fit-x-bleed py-4">
         <div className="flex items-center justify-between w-full ">
           <Link passHref href="/">
             <figure className="flex items-center justify-center basis-[1/4] cursor-pointer">

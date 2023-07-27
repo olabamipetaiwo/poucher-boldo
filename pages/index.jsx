@@ -10,8 +10,8 @@ import Testimonials from "@/containers/Home/Testimonials";
 const Home = () => {
   return (
     <BaseLayout>
-      {/* <Hero />
-      <Services />
+      <Hero />
+      {/* <Services />
       <Features />
       <Testimonials />
       <FAQs />
