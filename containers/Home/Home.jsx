@@ -6,7 +6,7 @@ import Presto from "assets/svgs/presto.svg";
 
 const Hero = () => {
   return (
-    <header className="fit-x-bleed flex flex-col pt-20 lg:pt-40 bg-gray bg-opacity-10">
+    <header className="fit-x-bleed flex flex-col pt-10 sm:pt-20 lg:pt-40 bg-gray bg-opacity-10">
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-20">
         <div className="flex flex-col">
           <h3 className="header-text text-dark-blue mt-16 mb-4">

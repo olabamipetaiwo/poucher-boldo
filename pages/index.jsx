@@ -11,8 +11,8 @@ const Home = () => {
   return (
     <BaseLayout>
       <Hero />
-      {/* <Services />
-      <Features />
+      <Services />
+      {/* <Features />
       <Testimonials />
       <FAQs />
       <Blog />
