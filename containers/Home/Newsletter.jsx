@@ -19,7 +19,7 @@ const Newsletter = () => {
           },
         },
       }}
-      className="bg-dark-blue mx-0 tab:mx-20 lg:mx-24 py-24 flex flex-col items-center text-white lg:rounded-xl"
+      className="bg-dark-blue mx-0 tab:mx-20 lg:mx-24 py-24 flex flex-col items-center text-white lg:rounded-xl news-bg"
     >
       <p className="text-center lg:w-3/4 header-text font-body mb-16">
         An enterprise template to ramp up your company website
