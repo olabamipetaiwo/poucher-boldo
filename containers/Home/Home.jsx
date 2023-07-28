@@ -23,7 +23,7 @@ const Hero = () => {
   }, [controls, inView]);
 
   return (
-    <motion.header className="fit-x-bleed flex flex-col pt-10 sm:pt-20 lg:pt-40 bg-gray bg-opacity-10">
+    <motion.header className="fit-x-bleed flex flex-col pt-10 sm:pt-20 lg:pt-40 bg-white bg-opacity-10 header-bg">
       <motion.section
         ref={ref}
         animate={controls}
