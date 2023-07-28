@@ -1,9 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
+import { useEffect } from "react";
 import Mark from "assets/svgs/mark.svg";
 import Eye from "assets/svgs/eye.svg";
 import Light from "assets/svgs/light.svg";
 import Feather from "assets/svgs/feather.svg";
 import Pie from "assets/svgs/Pie.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { variant } from "@/utils/common";
 
 const Features = () => {
   const _features = [
@@ -30,9 +34,18 @@ const Features = () => {
     },
   ];
 
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
   return (
     <section className="fit-x-bleed flex flex-col py-32 bg-gray bg-opacity-10">
-      <section className="grid grid-cols-1 lg:grid-cols-2  gap-x-36 mb-16 lg:mb-32">
+      <motion.section className="grid grid-cols-1 lg:grid-cols-2  gap-x-36 mb-16 lg:mb-32">
         <div className="flex items-center justify-center relative">
           <figure className="w-full">
             <img className="img-fill" src="/images/man.png" alt="man" />
@@ -56,8 +69,14 @@ const Features = () => {
 
           <button className="btn btn-primary mt-12">Start now</button>
         </div>
-      </section>
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-36 mb-16 lg:mb-40">
+      </motion.section>
+      <motion.section
+        className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-36 mb-16 lg:mb-40"
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variant.moveUp}
+      >
         <div className="flex flex-col pt-16">
           <p className="font-body text-4xl leading-[56px] text-black mb-10">
             We connect our customers with the best, and help them keep up-and
@@ -110,7 +129,7 @@ const Features = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </section>
   );
 };

@@ -9,7 +9,9 @@ import { variant } from "@/utils/common";
 
 const Hero = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+  });
 
   useEffect(() => {
     if (inView) {

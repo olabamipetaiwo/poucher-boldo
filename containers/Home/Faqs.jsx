@@ -38,17 +38,17 @@ const AccordionItem = ({ faq }) => {
 
 const faqs = [
   {
-    question: "Lorem ipsum dolor sit amet?",
+    question: "We connect our customers with the best?",
     answer:
       "Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium. Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.Tenetur ullam rerum ad iusto possimus sequi mollitia dolore sunt quam praesentium.",
   },
   {
-    question: "Dignissimos sequi architecto?",
+    question: "Android research & development rockstar? ",
     answer:
       "Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque. Aperiam ab atque incidunt dolores ullam est, earum ipsa recusandae velit cumque.",
   },
   {
-    question: "Voluptas praesentium facere?",
+    question: "We connect our customers with the best?",
     answer:
       "Blanditiis aliquid adipisci quisquam reiciendis voluptates itaque.",
   },
