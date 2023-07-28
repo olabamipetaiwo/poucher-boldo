@@ -1,8 +1,26 @@
 /* eslint-disable @next/next/no-img-element */
+import { motion } from "framer-motion";
 
 const Newsletter = () => {
   return (
-    <section className="bg-dark-blue mx-0 tab:mx-20 lg:mx-24 py-24 flex flex-col items-center text-white lg:rounded-xl">
+    <motion.section
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {
+          scale: 0.8,
+          opacity: 0,
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: 0.4,
+          },
+        },
+      }}
+      className="bg-dark-blue mx-0 tab:mx-20 lg:mx-24 py-24 flex flex-col items-center text-white lg:rounded-xl"
+    >
       <p className="text-center lg:w-3/4 header-text font-body mb-16">
         An enterprise template to ramp up your company website
       </p>
@@ -15,7 +33,7 @@ const Newsletter = () => {
           <button className="btn btn-secondary !w-full">Start now</button>
         </div>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import RightArrow from "assets/svgs/right-arrow.svg";
 import LeftArrow from "assets/svgs/left-arrow.svg";
-
 const Testimonials = () => {
   const _testimonials = [
     {

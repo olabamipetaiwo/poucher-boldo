@@ -1,13 +1,34 @@
 /* eslint-disable @next/next/no-img-element */
-
+import { useEffect } from "react";
 import HeroIllustration from "assets/svgs/hero.svg";
 import Boldo from "assets/svgs/logo.svg";
 import Presto from "assets/svgs/presto.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { variant } from "@/utils/common";
 
 const Hero = () => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
+
   return (
-    <header className="fit-x-bleed flex flex-col pt-10 sm:pt-20 lg:pt-40 bg-gray bg-opacity-10">
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+    <motion.header className="fit-x-bleed flex flex-col pt-10 sm:pt-20 lg:pt-40 bg-gray bg-opacity-10">
+      <motion.section
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variant.squareVariants}
+        className="grid grid-cols-1 lg:grid-cols-2 gap-20"
+      >
         <div className="flex flex-col">
           <h3 className="header-text text-dark-blue mt-16 mb-4">
             Save time by building fast with Boldo Template{" "}
@@ -31,8 +52,14 @@ const Hero = () => {
             <HeroIllustration className="img-fill" />
           </figure>
         </div>
-      </section>
-      <section className="companies">
+      </motion.section>
+      <motion.section
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variant.squareVariants}
+        className="companies"
+      >
         <figure>
           <Boldo />
         </figure>
@@ -48,8 +75,8 @@ const Hero = () => {
         <figure>
           <Boldo />
         </figure>
-      </section>
-    </header>
+      </motion.section>
+    </motion.header>
   );
 };
 

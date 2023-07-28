@@ -1,8 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import { useEffect } from "react";
 import ServiceOne from "assets/svgs/service-1.svg";
 import ServiceTwo from "assets/svgs/service-2.svg";
 import ServiceThree from "assets/svgs/service-3.svg";
 import ArrowRight from "assets/svgs/arrow-right.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { variant } from "@/utils/common";
 
 const Services = () => {
   const _services = [
@@ -25,13 +29,31 @@ const Services = () => {
       link: "/cool",
     },
   ];
+
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
   return (
     <section className="bg-dark-blue fit-x-bleed py-24 flex flex-col text-white">
       <h2 className="text-center title-text font-sans mb-4">Our services</h2>
       <p className="text-center lg:w-3/4 header-text font-body mb-16 mx-auto ">
         Handshake infographic mass market crowdfunding iteration.
       </p>
-      <section className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-y-16 gap-x-24 ">
+      <motion.section
+        ref={ref}
+        animate={controls}
+        initial="hidden"
+        variants={variant.squareVariants}
+        className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-y-16 gap-x-24 "
+      >
         {_services.map((_item) => {
           return (
             <div className="flex flex-col items-start" key={_item.id}>
@@ -50,7 +72,7 @@ const Services = () => {
             </div>
           );
         })}
-      </section>
+      </motion.section>
     </section>
   );
 };
